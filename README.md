@@ -19,6 +19,11 @@ Integration testing means checking if different modules are working fine when co
 -   Node >= 8.10
 -   npm >= 5.6
 
+## Demo
+
+![Demo integration testing](https://user-images.githubusercontent.com/9513390/97108959-f3b72d00-168d-11eb-8338-baf3cf47b38d.gif)
+
+
 ## Installation
 **Clone**  this repository
 ```
