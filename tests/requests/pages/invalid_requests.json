@@ -1,0 +1,184 @@
+{
+  "token_fail": {
+    "request":{
+      "header":{
+        "Authorization": "X",
+        "Accept":"application/json"
+      },
+      "body":{
+      }
+    },
+    "response": {
+      "message": "Invalid authorization"
+    },
+    "statusCode": 401
+  },
+  "missing_last_name_parameter": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "message": [
+        {
+          "msg": "Last name can not be an empty value",
+          "param": "last_name",
+          "location": "body"
+        }
+      ]
+    },
+    "statusCode": 422
+  },
+  "missing_salt_parameter": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "last_name":"renteria",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "message": [
+        {
+          "msg": "Encrypted salt can not be an empty value",
+          "param": "salt",
+          "location": "body"
+        }
+      ]
+    },
+    "statusCode": 422
+  },
+  "missing_hash_parameter": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "last_name":"renteria"
+      }
+    },
+    "response": {
+      "message": [
+        {
+          "msg": "Encrypted hash can not be an empty value",
+          "param": "hash",
+          "location": "body"
+        }
+      ]
+    },
+    "statusCode": 422
+  },
+  "bad_request_1": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "last_name":"Alli",
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "msg": "Bad request"
+    },
+    "statusCode": 400
+  },
+  "bad_request_2": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "last_name":"Alli",
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "msg": "Bad request"
+    },
+    "statusCode": 400
+  },
+  "bad_request_3": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "last_name":"Alli",
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "msg": "Bad request"
+    },
+    "statusCode": 400
+  },
+  "lockout_request_1": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "last_name":"Alli",
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "msg": "Locked"
+    },
+    "statusCode": 423
+  },
+  "lockout_request_2": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "last_name":"Alli",
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "msg": "Too Many Requests"
+    },
+    "statusCode": 429
+  },
+  "lockout_request_3": {
+    "request":{
+      "header":{
+        "Authorization": "Bearer c3VwZXJhZG1pbjp1QHR3XkVXQ3BVWDFrdEN1",
+        "Accept":"application/json"
+      },
+      "body":{
+        "last_name":"Alli",
+        "salt":"$2a$10$6GTjYvMAz9MakGftPFwYfO",
+        "hash":"$2a$10$6GTjYvMAz9MakGftPFwYfOMKLNvZplA7J3F27Jx6JSWer/c/Yn5F."
+      }
+    },
+    "response": {
+      "msg": "Too Many Requests"
+    },
+    "statusCode": 429
+  }
+}
