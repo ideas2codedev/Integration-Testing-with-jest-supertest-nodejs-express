@@ -5,10 +5,6 @@
 
 Integration testing means checking if different modules are working fine when combined together as a group.If you want a better final product, you need integration testing because can detect any change in the flow. Let's code a integration resting with jest and supertest
 
-## Sponsor
-
-[![enter image description here](https://www.ideas2code.io/wp-content/uploads/2020/10/bar.fw_.png)](http://adf.ly/23757721/www.ideas2code.io)
-
 ## Objetive
  -  Test our home page **"/"**
  -  Test the authorization validation  **"/pages"**
